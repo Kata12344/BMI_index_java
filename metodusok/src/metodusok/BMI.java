@@ -1,6 +1,7 @@
 
 package metodusok;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class BMI {
@@ -38,8 +39,11 @@ public class BMI {
         return tomeg / Math.pow(magassag / 100.0,2);
     }
 
-    static void ertekeles() {
-        System.out.printf("Ön %d");
+    static void ertekeles(int tomeg, int magassag, double bmiIndex) {
+        System.out.printf("Ön %d cm magas és %d kg tömegű\n", magassag, tomeg);
+        System.out.printf(Locale.ENGLISH,"Így BMI indexe %.1f",bmiIndex);
+        String testalkat = "túlsúlyos";
+        System.out.printf("Tehát Ön %s testalkatú\n", testalkat);
     }
 
 }
